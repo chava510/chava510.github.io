@@ -1,0 +1,160 @@
+body {
+    background-color: #bce5d8;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    background: linear-gradient(#003B46, #C4DFE6);
+    text-align: center;
+}
+
+.header {
+    text-decoration: overline;
+    font-size: 1.1cm;
+    color: #626D71;
+    text-align: center;
+}
+
+.content {
+    background-color: #CDCDC0;
+    margin: 0 auto;
+    width: 750px;
+    text-align: left;
+    padding: 20px;
+}
+
+.main {
+    font-size: 1.5cm;
+    font-style: italic;
+    color: #B38867;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.nav-items {
+    margin: 10px;
+}
+
+a {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bold;
+    background-color: #CDAB81;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #6C5F5B;
+
+}
+
+.menu {
+    text-align: center;
+}
+
+.nav-items:hover {
+    text-decoration: underline;
+}
+
+#you {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+#o {
+    float: right;
+    width: 200px;
+}
+
+#goal {
+    float: left;
+    width: 200px;
+}
+
+#dis {
+    float: left;
+    width: 200px;
+
+}
+
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#eastBay {
+    width: 300px;
+    float: left;
+}
+
+.eastBayP {
+    margin-right: 250px;
+}
+
+#longBeach {
+    width: 200px;
+    float: right;
+}
+
+.collegeTitle {
+    margin-top: 90px;
+}
+
+.longBeachP {
+
+    margin-left: 250px;
+}
+
+#losAngeles {
+    float: left;
+    width: 200px
+}
+
+.losAngelesP {
+    margin-right: 250px;
+}
+
+#links {
+    text-decoration: underline;
+    color: blue;
+}
+
+#black {
+    color: black;
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+
+pre {
+    text-align: left;
+}
+
+h3 {
+    text-align: left;
+}
+
+iframe {
+    border: none;
+}

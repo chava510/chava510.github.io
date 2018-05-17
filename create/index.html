@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <style type="text/css">
+        body {
+
+            background-color: #CDCDC0;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script type="text/javascript">
+        var x = 500;
+        var y = 410;
+        var h = 203;
+        var s = 46;
+        var b = 0;
+        var speed = -2;
+
+
+        var saturation = 80;
+        var bmin = 10;
+        var bmax = 100;
+        var numOfCircles = 500;
+
+        var bgXPos = [];
+        var bgYPos = [];
+        var bgYSpeed = [];
+
+
+        function setup() {
+            createCanvas(600, 400);
+
+            colorMode(HSB);
+
+            for (let i = 0; i < numOfCircles; i++) {
+                bgXPos[i] = random(0, 600);
+
+                bgYPos[i] = 0;
+
+                bgYSpeed[i] = random(0, 3);
+            }
+        }
+
+        function draw() {
+            sunrise();
+            if (b > 90) {
+                hail();
+            }
+
+            drawSkyline(0, 350, 1);
+
+        }
+
+
+        function sunrise() {
+            background(h, s, b);
+
+            if (y > 40) {
+                y = y + speed;
+            }
+
+            if (b < 90) {
+
+                b = b + 0.29787234042;
+
+
+            }
+
+            fill(52, 100, 100);
+
+            ellipse(x, y, 75, 75);
+
+        }
+
+
+
+        function hail() {
+
+            for (let i = 0; i < numOfCircles; i++) {
+                fill(100);
+
+                noStroke();
+
+                bgYPos[i] = bgYSpeed[i] + bgYPos[i];
+
+                ellipse(bgXPos[i], bgYPos[i], 5, 5);
+
+                if (bgYPos[i] > height)
+
+                {
+                    bgXPos[i] = random(0, 600);
+
+                    bgYPos[i] = 0;
+
+                    bgYSpeed[i] = random(1, 3);
+
+
+                }
+            }
+
+        }
+
+        function drawSkyline(x, y, s) {
+            push();
+
+            translate(x, y);
+
+            scale(s);
+
+            fill('rgb(150,0,0)');
+
+            stroke('rgb(255, 255, 255)');
+
+            strokeWeight(3);
+
+            beginShape();
+            vertex(0, -40);
+            vertex(3, -40);
+            vertex(3, -35);
+            vertex(10, -35);
+            vertex(10, -39);
+            vertex(13, -39);
+            vertex(13, -49);
+            vertex(11, -49);
+            vertex(16, -57);
+            vertex(18, -57);
+            vertex(22, -49);
+            vertex(25, -49);
+            vertex(25, -75);
+            vertex(29, -75);
+            vertex(29, -105);
+            vertex(43, -105);
+            vertex(43, -115);
+            vertex(43, -104);
+            vertex(58, -104);
+            vertex(58, -88);
+            vertex(60, -85);
+            vertex(60, -47);
+            vertex(64, -47);
+            vertex(64, -53);
+            vertex(70, -53);
+            vertex(70, -66);
+            vertex(77, -66);
+            vertex(77, -77);
+            vertex(79, -77);
+            vertex(79, -105);
+            vertex(83, -105);
+            vertex(83, -130);
+            vertex(85, -130);
+            vertex(85, -132);
+            vertex(93, -134);
+            vertex(93, -145);
+            vertex(93, -134);
+            vertex(97, -134);
+            vertex(97, -139);
+            vertex(99, -139);
+            vertex(99, -134);
+            vertex(101, -132);
+            vertex(101, -77);
+            vertex(115, -77);
+            vertex(120, -82);
+            vertex(120, -86);
+            vertex(120, -82);
+            vertex(125, -77);
+            vertex(125, -66);
+            vertex(127, -66);
+            vertex(127, -60);
+            vertex(131, -60);
+            vertex(131, -77);
+            vertex(150, -77);
+            vertex(150, -55);
+            vertex(155, -55);
+            vertex(155, -50);
+            vertex(161, -50);
+            vertex(161, -100);
+            vertex(171, -110);
+            vertex(179, -110);
+            vertex(189, -100);
+            vertex(189, -77);
+            vertex(209, -77);
+            vertex(209, -100);
+            vertex(213, -120);
+            vertex(225, -120);
+            vertex(230, -100);
+            vertex(230, -67);
+            vertex(245, -67);
+            vertex(245, -45);
+            vertex(250, -45);
+            vertex(250, -77);
+            vertex(255, -77);
+            vertex(255, -85);
+            vertex(260, -85);
+            vertex(260, -77);
+            vertex(265, -77);
+            vertex(265, -45);
+            vertex(280, -45);
+            vertex(280, -40);
+            vertex(295, -40);
+            vertex(295, -32);
+            vertex(300, -32);
+            vertex(300, -25);
+            vertex(325, -25);
+            vertex(325, -40);
+            vertex(335, -55);
+            vertex(340, -55);
+            vertex(343, -77);
+            vertex(345, -55);
+            vertex(350, -55);
+            vertex(360, -40);
+            vertex(360, -25);
+            vertex(365, -25);
+            vertex(365, -20);
+            vertex(375, -20);
+            vertex(375, -17);
+            vertex(385, -17);
+            vertex(385, -25);
+            vertex(400, -25);
+            vertex(400, -45);
+            vertex(390, -55);
+            vertex(400, -65);
+            vertex(400, -90);
+            vertex(420, -90);
+            vertex(420, -65);
+            vertex(430, -55);
+            vertex(420, -45);
+            vertex(420, -10);
+            vertex(430, -10);
+            vertex(430, -5);
+            vertex(440, -5);
+            vertex(440, -30);
+            vertex(450, -30);
+            vertex(450, -60);
+            vertex(465, -110);
+            vertex(480, -60);
+            vertex(480, -15);
+            vertex(485, -15);
+            vertex(485, -8);
+            vertex(493, -8);
+            vertex(493, -40);
+            vertex(495, -70);
+            vertex(490, -80);
+            vertex(490, -90);
+            vertex(520, -90);
+            vertex(520, -80);
+            vertex(515, -70);
+            vertex(517, -40);
+            vertex(517, -20);
+            vertex(523, -20);
+            vertex(523, -17);
+            vertex(538, -17);
+            vertex(538, -50);
+            vertex(548, -50);
+            vertex(548, -65);
+            vertex(548, -49);
+            vertex(558, -49);
+            vertex(558, -36);
+            vertex(568, -36);
+            vertex(568, 5);
+            vertex(600, 5);
+            vertex(600, 400);
+            vertex(-10, 400);
+            endShape();
+            pop();
+        }
+    </script>
+</body>
+
+</html>

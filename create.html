@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="script.js">
+    </script>
+    <title>Capstone Site</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="content">
+            <h1 class="main">Chava's Site</h1>
+            <h1 class="header">AP Create Task</h1>
+            <div class="menu">
+                <button class="btn"><i class="fa fa-bars"></i> Menu </button>
+            </div>
+            <div class="nav">
+                <a class="nav-items" href="home.html">Home</a>
+                <a class="nav-items" href="explore.html">Ap Explore Task</a>
+                <a class="nav-items" href="college.html">College</a>
+                <a class="nav-items" href="strength.html">Strengths</a>
+            </div>
+            <p>
+                <h3>2A)</h3>My program is written in JavaScript with the usage of p5.js library . My code was created using Glitch a development environment. The purpose of my program is to show generative art. The city, sun, and hail is a p5.js sketch that
+                is drawn when the HTML page loads the JavaScript program. In the video clip, you can see that there is a skyline and instaly the sun starts to brighten up the background to have a sunrise. When the sunrise is complete you can see that
+                it starts to hail.
+
+            </p>
+            <p>
+                <h3>2B)</h3>My partner and I used iterative pair programming by (explain all the steps it took to complete the project beginning to end). My partner and I wrote the code to make the city be drawn and code to make the hail fall down together.
+                I wrote code to make the background color of the canvas change color smoothly while the sun move towards the top and to make the hail fall until a certain time independently. There was many problems that I came across when coding the program.
+                The first encountered challenge I faced was that the color of the city skyline and the color of the hail was the same color as the sun which is yellow. I solved this challenge by giving each of the function their own color and not created
+                variable for them. The second encountered challenge I faced was that when the hail would to fall it did not toward the city skyline it stayed stuck at the top of the screen. My parnther helped me solve this problem by reading my code and
+                telling me that in my for loop for the hail there was no change in speed for the hail to fall down. I had to add speed to the y position of the hail continuously for it to fall down.
+
+            </p>
+            <p><b>2C)</b>
+                <pre><code>function draw() {
+    sunrise();
+    if (b > 90) {
+        hail();
+    }
+    drawSkyline(0, 350, 1);
+}
+</code></pre>The main algorithm that I am using is the draw() function. The purpose this block of code is to render the city skyline onto the page, to have a sunrise, and finally for it to hail. When the line of code hail(); runs correctly, it renders
+                small white circles onto the page and make it hail fall from the top of the screen.<br><br>This line code is inside of the hail(); sub algorithm function.
+                <pre><code>bgYPos[i] = bgYSpeed[i] + bgYPos[i]; 
+  
+  ellipse(bgXPos[i],bgYPos[i],5,5);</code></pre>The intended purpose of this sub algorithm is to draw small white circles at a given x-position, y-position, and given length to make the hail fall down vertically. When this math algorithm shown above runs correctly it is able to make
+                the hail fall down vertically on the y-axis. This sub algorithm is able to achieve this result because it add ySpeed to the y-position of the hail making it fall down. If this program did not include this algorithm, then it will make the
+                hail stay in place.<br><br>This line code is also inside of the hail(); sub algorithm function.
+                <pre><code>if (bgYPos[i] > height)
+
+{
+    bgXPos[i] = random(0, 600);
+
+    bgYPos[i] = 0;
+
+
+}</code></pre>The intended purpose of this sub algorithm is to reset the hail that has fallen out of the canvas to make the hail continue falling. When this logic algorithm shown above runs correctly it is able to make the hail reset once it leaves
+                the canvas width and go back right up. This sub algorithm is able to achieve this result because the if statement is telling the circles that are out of the screen to choose different x-postions and reset the y-position to zero if they
+                are out of the canvas height.
+
+            </p>
+            <p><b>2D)</b>
+                <pre><code>function drawSkyline(x, y, s) {
+    push();
+
+    translate(x, y);
+
+    scale(s);
+
+    fill('rgb(150,0,0)');
+
+    stroke('rgb(255, 255, 255)');
+
+    strokeWeight(3);
+
+    beginShape();
+    vertex(0, -40);
+    vertex(3, -40);
+    vertex(3, -35);
+    vertex(10, -35);
+    vertex(10, -39);
+    vertex(13, -39);
+    vertex(13, -49);
+    vertex(11, -49);
+    endShape();
+    pop();
+}</code></pre>An example of an abstraction in my program is the drawSkyline() function. This simplifies my code because it is one specific function does only one thing and not everything piece of the program. I created this drawSkyline() function to
+                use parameter. The given parameter are (x,y,s) which is the x-position, y-position, and a specific scaled ratio. This is abstraction is useful because incase i need to change the position of the city skyline or I need to make the city
+                smaller or bigger I do not need to look through a bunch of messy code. If this abstraction weren’t present, then it would make it extremely difficult to size the skyline to fit perfect on the canvas.
+
+            </p>
+
+            <iframe src="create/index.html" width="700" height="500" />
+
+        </div>
+    </div>
+</body>
+
+</html>
