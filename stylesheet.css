@@ -37,6 +37,10 @@ body {
     text-align: center;
 }
 
+#rTitle {
+    text-align: center;
+}
+
 
 .nav-items {
     margin: 10px;
@@ -59,6 +63,7 @@ a {
 
 .nav-items:hover {
     text-decoration: underline;
+    cursor: crosshair;
 }
 
 #you {
@@ -153,6 +158,10 @@ pre {
 
 h3 {
     text-align: left;
+}
+
+h2 {
+    text-align: center;
 }
 
 iframe {
