@@ -24,9 +24,59 @@
                 <a class="nav-items" href="college.html">College</a>
                 <a class="nav-items" href="strength.html">Strengths</a>
             </div>
-            <h2 id="rTitle">Solar Panel & Pollution</h2>
+
+            <h2 id="Title"><u>Solar Panel & Pollution </u></h2>
+            <p>Pollution is the introduction of harmful substances into the environment. Pollutions are one of the major problems in America today and also in other parts of the world. Pollutions damages the environment, like water and plants, and also the
+                health of humans. A way to stop pollution is going solar energy. Solar energy created by solar panels, can help stop air pollution around the world. Solar panels will reduce global warming, improve the health of human beings, and save
+                consumers money.
+            </p>
+            <table style="width:100%">
+                <tr>
+                    <td><img class="research" src="global.jpg" /></td>
+                    <td>
+                        <p>Pollution causes the temperature to rise which is global warming due to air pollution. Bob Hirshon, a scientist states that "In the summer of 2006, hundreds died as temperatures reached the 120's as far north as South Dakota."</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>California suffers the worst health impacts from air pollution, with about 21,000 early deaths annually" As research shows air pollution impacts California mostly and causes numerous deaths. Breathing in air pollution is harmful
+                            for your boy, so many people will end up with health problems and eventually die.</p>
+                    </td>
+                    <td><img class="research" src="health.jpg" /></td>
+                </tr>
+            </table>
+            <h2 id="solution">The Solution to Pollution</h2>
+            <table style="width:100%">
+                <tr>
+                    <td><img class="research" src="solar.jpg" /></td>
+                    <td>
+                        <p>Solar panels reduce the emission of carbon dioxide in the atmosphere. Energysage a company who sells solar panels, but also research average usage of states in the United States states that "...the average home uses 7,092 kWh of
+                            electricity annually. Choosing a clean source of electricity like solar panels can eliminate the same amount of carbon emissions that would result from burning 5,253 pounds of coal each year"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solar Panels absorb sunlight as a source of energy to produce electricity. Michael Dhar, a research scientist explains that "Solar panels are made up of silicon which is an element then it has a negative layer on the top and positive
+                        on the bottom so when photons, sunlight rays, hit the panels silicon converts them to positive charge with the help of boron, a conductor, converts light energy to regular energy."</td>
+                    <td><img class="reserach" src="panels.jpg" /></td>
+                </tr>
+                <tr>
+                    <td><img id="clean" src="clean.jpg" /><img id="dirty" src="dirty.jpg" /></td>
+                    <td>
+                        <p id="keepWorldClean"></p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
+    <script>
+        $("#clean").hide();
+        $("#dirty").click(function() {
+            $("#dirty").fadeOut(2000);
+            $("#clean").fadeIn(2000);
+            $("#keepWorldClean").append("Let's Keep The World Clean!!");
+
+        });
+    </script>
 </body>
 
 </html>

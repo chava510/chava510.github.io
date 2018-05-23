@@ -172,3 +172,50 @@ iframe {
     margin-left: 15%;
     width: 500px;
 }
+
+.research {
+    border: dashed;
+    width: 300px;
+}
+
+#solution {
+    text-align: center;
+}
+
+#dirty {
+    width: 300px;
+}
+
+#clean {
+    width: 300px;
+}
+
+#keepWorldClean {
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.me {
+    width: 200px;
+}
+
+#image img {
+    width: 100px;
+    width: 26%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    padding: 50px;
+}
+
+#image {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#image img:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
